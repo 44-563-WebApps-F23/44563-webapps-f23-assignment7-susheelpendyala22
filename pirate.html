@@ -245,10 +245,7 @@
     let trapLocation = 18;
     let gameOver = false;
 
-
-
     function check(position) {
-
       if (gameOver) return;
       let id = ids[position];
       let ps = document.getElementById(id);
@@ -264,19 +261,14 @@
         ps.src = "pirate.jpg";
       }
 
-
-
       checkCount++;
       penalty++;
-
 
       document.getElementById("location").textContent = `No. of locations ${checkCount}`;
       document.getElementById("penalty").textContent = `penalty is ${penalty}`;
       lastCheck = position;
 
     }
-
-
     function help(){
             var helpText = "";
             var treasureCol = parseInt(treasureLocation % 5);
@@ -291,24 +283,17 @@
             var rowDiff = Math.abs(lastCheckRow - treasureRow);
 
             if(colCondition || rowCondition) {
-
                 if(rowDiff == 1 || colDiff == 1) {
-
                     helpText = "Can Smell It";
-
                 }
-
                 else if(rowDiff == 2 || colDiff == 2){
-
                     helpText = "Close Matie";
                 }
-
                 else {
                     helpText = "Step Faster"
                 }
             }
             else if(rowDiff == 1 && colDiff == 1){ 
-
                 helpText = "Close Matie";
 
             }
@@ -316,16 +301,13 @@
 
                 helpText = "Step Faster";
             }
-            
+
             penalty += 2;
             document.getElementById("penalty").innerHTML = "Penalty is : " + penalty;
             document.getElementById("help").innerHTML = helpText;
         }
 
-
   </script>
 
-
 </body>
-
 </html>

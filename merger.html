@@ -1,33 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <body style="background-color:cornflowerblue"></body>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title> Builds a Merger</title>
-
     <style>
         body {
-
             display: flex;
-
             height: 50vh;
-
             flex-direction: column;
-
             align-items: center;
-
             justify-content: center;
             margin: 0;
-
         }
-
         #inputText {
             padding: 10px;
             font-size: 18px;
@@ -51,21 +37,15 @@
             cursor: pointer;
         }
         button {
-
             margin-top: 10px;
-
         }
         .flex-container {
-
             display: flex;
-
             flex-direction: row;
-
             background-color: chartreuse
         }
         .flex-container>div {
-
-            /div children of the flex container/ background-color: #f1f1f1;
+            /div children of the flex container/ background-color::cue-region();
             margin: 10px;
             padding: 20px;
             font-size: 30px;
@@ -83,8 +63,8 @@
 </header>
 <div class="flex-container" id="target">
     <div class="merger"> <em>Row Item 1</em></div>
-    <div class="merger"><em>Row Item 1</em></div>
-    <div class="merger"><em>Row Item 1</em></div>
+    <div class="merger"><em>Row Item 2</em></div>
+    <div class="merger"><em>Row Item 3</em></div>
 </div><br>
 <div>
     <input type="text" id="inputText" placeholder="Enter your text" />
