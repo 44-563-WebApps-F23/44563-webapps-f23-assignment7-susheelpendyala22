@@ -1,63 +1,165 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
  <head>
-  <title>  Speed check</title>
+
+  <title>Susheel Pendyala - Speed check</title>
 
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- </head>
 
- <body style="background-color:lightgrey">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+
+   rel="stylesheet"
+
+   href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+
+  />
+
+  <style>
+
+   /* Center the content */
+
+   body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+   }
+
+   h1 {
+
+    text-align: center;
+
+   }
+
+   #target {
+
+    font-size: 24px;
+
+    text-align: center;
+
+   }
+
+   #counter {
+
+    font-size: 36px;
+
+    text-align: center;
+
+   }
+
+   .btn {
+
+    margin: 10px;
+
+   }
+
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ </head>
 
  <body>
 
   <header>
-   <h1 class="text-center"> Susheel pendyala Speed check</h1>
+
+   <h1>Susheel Pendyala - Speed check</h1>
+
   </header>
 
   <div id="target">Your Time: </div>
-  <div id="counter">Count:</div>
+
+  <div id="counter">Count: </div>
+
   <button id="startTime"  class="btn btn-info">Start Timer</button>
+
   <button id="reactButton" class="btn btn-success" >React</button>
-  
-  
+
   <script>
+
    let reactTime = undefined;
+
    function recordTime() {
+
     reactTime = Date.now();
+
     console.log(reactTime);
+
    }
 
    const reactBtn = document.getElementById("reactButton");
-   reactBtn.onclick = recordTime;
-   function startTime() {
-    for (let i = 0; i < 9; i++) {
-     setTimeout(function () {
-      const countElem = document.getElementById("counter");
-      countElem.innerHTML = i
 
-     },(8 - i) * 1000);
+   reactBtn.onclick = recordTime;
+
+   function startTime() {
+
+    const countdownStart = Math.floor(Math.random() * 9) + 2; // Random value between 2 and 10
+
+    console.log(`Countdown starts from: ${countdownStart}`);
+
+    for (let i = countdownStart; i >= 0; i--) {
+
+     setTimeout(function () {
+
+      const countElem = document.getElementById("counter");
+
+      countElem.innerHTML = i;
+
+     }, (countdownStart - i) * 1000);
 
     }
-    setTimeout(function() {
-      if (reactTime === undefined) {
-        const targetElement = document.getElementById("target");
-        targetElement.innerHTML = "Too Slow";
-      }
-      else {
-        const endTime = Date.now();
-        const reactionTime = endTime - reactTime;
-        const targetElement = document.getElementById("target");
-        targetElement.innerHTML = `Reaction time: ${reactionTime} ms`;
-      }
-    }, 8000);
+
+    setTimeout(function () {
+
+     if (reactTime === undefined) {
+
+      // User was too slow
+
+      const targetElement = document.getElementById("target");
+
+      targetElement.innerHTML = "Too Slow";
+
+     } else {
+
+      // User clicked in time
+
+      const endTime = Date.now();
+
+      const reactionTime = endTime - reactTime;
+
+      const targetElement = document.getElementById("target");
+
+      targetElement.innerHTML = `Reaction time: ${reactionTime} ms`;
+
+     }
+
+    }, countdownStart * 1000);
+
    }
-    const startTimerButton = document.getElementById("startTime");
-    startTimerButton.onclick = startTime;
+
+   const startTimerButton = document.getElementById("startTime");
+
+   startTimerButton.onclick = startTime;
+
   </script>
+
  </body>
+
 </html>

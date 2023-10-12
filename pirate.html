@@ -1,313 +1,630 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+ 
 
 <head>
 
+ 
+
   <title>Find the treasure by” Susheel Pendyala</title>
+
   <meta psrset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+ 
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+
     crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+
     crossorigin="anonymous"></script>
+
 </head>
+
+ 
 
 <body>
 
+ 
+
   <header>
+
+ 
 
     <h1>Find the Treasure by Pendyala Susheel</h1>
 
+ 
+
   </header>
 
+ 
+
   <p style="color:blue;font-family:Georgia, 'Times New Roman', Times, serif, Courier, monospace;">Click on the locations
+
     to search for treasure, beware the traps</p>
 
+ 
+
   <p id="location" style="color:blue;font-family:Georgia, 'Times New Roman', Times, serif, Courier, monospace;">Number
+
     of locations checked is zero</p>
+
+ 
 
   <p id="penalty" style="color:psrtreuse: 'Times New Roman', Times, serif;">Penalty is zero</p>
 
+ 
+
   <p class="btn btn-success" style="color:black;font-family: 'Courier New', Courier, monospace;" onclick = "help()">Click for help</p>
+
+ 
 
   <p id="help" style="color:chocolate; font-family: 'Courier New', Courier, monospace;">help report</p>
 
+ 
+
   <div class="container">
+
+ 
 
     <div class="row mb-3">
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i0" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(0)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i1" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(1)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i2" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(2)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i3" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(3)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i4" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(4)">
 
+ 
+
       </div>
+
+ 
 
     </div>
 
+ 
+
   </div>
+
+ 
 
   <div class="container">
 
+ 
+
     <div class="row mb-3">
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i5" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(5)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i6" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(6)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i7" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(7)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i8" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(8)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i9" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(9)">
 
+ 
+
       </div>
+
+ 
 
     </div>
 
+ 
+
   </div>
+
+ 
 
   <div class="container">
 
+ 
+
     <div class="row mb-3">
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i10" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(10)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i11" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(11)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i12" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(12)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i13" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(13)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i14" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(14)">
 
+ 
+
       </div>
+
+ 
 
     </div>
 
+ 
+
   </div>
+
+ 
 
   <div class="container">
 
+ 
+
     <div class="row mb-3">
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i15" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(15)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i16" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(16)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i17" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(17)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i18" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(18)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i19" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(19)">
 
+ 
+
       </div>
+
+ 
 
     </div>
 
+ 
+
   </div>
+
+ 
 
   <div class="container">
 
+ 
+
     <div class="row mb-3">
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i20" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(20)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i21" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(21)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i22" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(22)">
 
+ 
+
       </div>
 
+ 
+
       <div class="col-md-2">
+
+ 
 
         <img id="i23" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(23)">
 
+ 
+
       </div>
+
+ 
 
       <div class="col-md-2">
 
+ 
+
         <img id="i24" src="Location Treasure.jpg" alt="Location" width="100" height="100" onclick="check(24)">
+
+ 
 
       </div>
 
+ 
+
     </div>
+
+ 
 
   </div>
 
+ 
+
+ 
 
   <script>
+
     // Step 4: Declare an array of unique ids
+
     let ids = [
+
       "i0", "i1", "i2", "i3", "i4",
+
       "i5", "i6", "i7", "i8", "i9",
+
       "i10", "i11", "i12", "i13", "i14",
+
       "i15", "i16", "i17", "i18", "i19",
+
       "i20", "i21", "i22", "i23", "i24"
+
     ];
 
+ 
+
     let checkCount = 0;
+
     let penalty = 0;
+
     let lastCheck = 0;
+
     let treasureLocation = 5;
+
     let trapLocation = 18;
+
     let gameOver = false;
 
+ 
+
     function check(position) {
+
       if (gameOver) return;
+
       let id = ids[position];
+
       let ps = document.getElementById(id);
+
       if (position === treasureLocation) {
+
         ps.src = "Treasure.jpg";
+
         gameOver = true;
+
         penalty -= 3;
+
       } else if (position === trapLocation) {
+
         ps.src = "Treasure trap.jpg";
+
         gameOver = true;
+
         penalty += 4;
+
       } else {
+
         ps.src = "pirate.jpg";
+
       }
 
+ 
+
       checkCount++;
+
       penalty++;
 
+ 
+
       document.getElementById("location").textContent = `No. of locations ${checkCount}`;
+
       document.getElementById("penalty").textContent = `penalty is ${penalty}`;
+
       lastCheck = position;
 
+ 
+
     }
-    function help(){
-            var helpText = "";
-            var treasureCol = parseInt(treasureLocation % 5);
-            var treasureRow = parseInt(treasureLocation / 5);
-            var lastCheckCol = parseInt(lastCheck % 5);
-            var lastCheckRow = parseInt(lastCheck / 5);
 
-            var colCondition = treasureCol == lastCheckCol;
-            var rowCondition = treasureRow == lastCheckRow;
+    function help() {
 
-            var colDiff = Math.abs(lastCheckCol - treasureCol);
-            var rowDiff = Math.abs(lastCheckRow - treasureRow);
+var treasureRow = Math.floor(treasureLocation / 5);
 
-            if(colCondition || rowCondition) {
-                if(rowDiff == 1 || colDiff == 1) {
-                    helpText = "Can Smell It";
-                }
-                else if(rowDiff == 2 || colDiff == 2){
-                    helpText = "Close Matie";
-                }
-                else {
-                    helpText = "Step Faster";
-                }
-            }
-            else if(rowDiff == 1 && colDiff == 1){ 
-                helpText = "Close Matie";
+var treasureCol = treasureLocation % 5;
 
-            }
-            else{
+var lastRow = Math.floor(lastCheck / 5);
 
-                helpText = "Step Faster";
-            }
+var lastCol = lastCheck % 5;
 
-            penalty += 2;
-            document.getElementById("penalty").innerHTML = "Penalty is : " + penalty;
-            document.getElementById("help").innerHTML = helpText;
-        }
+if (
+
+  Math.abs(lastRow - treasureRow) <= 1 &&
+
+  Math.abs(lastCol - treasureCol) <= 1 &&
+
+  (Math.abs(lastRow - treasureRow) !== 0 || Math.abs(lastCol - treasureCol) !== 0)
+
+) {
+
+  var helpText = "Can smell it";
+
+}
+
+else if (
+
+  Math.abs(lastRow - treasureRow) + Math.abs(lastCol - treasureCol) == 2
+
+) {
+
+  var helpText = "Close Matie";
+
+}
+
+else {
+
+  var helpText = "Step Faster";
+
+}
+
+penalty += 2;
+
+document.getElementById("penalty").textContent = `penalty is  ${penalty}`;
+
+document.getElementById("help").textContent = helpText;
+
+document.getElementById("help").onclick = help;
+
+}
+
+
+
+
+
+function initGame() {
+
+trapLocation = Math.floor(Math.random() * 25);
+
+treasureLocation = Math.floor(Math.random() * 25);
+
+
+
+while (trapLocation === treasureLocation) {
+
+  treasureLocation = Math.floor(Math.random() * 25);
+
+}
+
+}
+
+function resetGame() {
+
+  initGame();
+
+}
+
+initGame();
+
+const newGameButton = document.getElementById('new-game-button');
+
+newGameButton.addEventListener('click', resetGame);
+
 
   </script>
 
 </body>
+
 </html>
