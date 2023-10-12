@@ -1,107 +1,340 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
+
+ <head>
     <body style="background-color:cornflowerblue"></body>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Builds a Merger</title>
-    <style>
-        body {
-            display: flex;
-            height: 50vh;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-        }
-        #inputText {
-            padding: 10px;
-            font-size: 18px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-            max-width: 300px;
-        }
-        .buttons-container {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: brown;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button {
-            margin-top: 10px;
-        }
-        .flex-container {
-            display: flex;
-            flex-direction: row;
-            background-color: chartreuse
-        }
-        .flex-container>div {
-            /div children of the flex container/ background-color::cue-region();
-            margin: 10px;
-            padding: 20px;
-            font-size: 30px;
-        }
-        @media (max-width: 600px) {
-            .flex-container {
-                flex-direction: column;
-                background-color: green;
-            }
-        }
-    </style>
-</head>
-<header>
-    <h2>Susheel Pendyala Builds a Merger</h2>
-</header>
-<div class="flex-container" id="target">
-    <div class="merger"> <em>Row Item 1</em></div>
-    <div class="merger"><em>Row Item 2</em></div>
-    <div class="merger"><em>Row Item 3</em></div>
-</div><br>
-<div>
-    <input type="text" id="inputText" placeholder="Enter your text" />
-</div>
-<p>
-    Press the button to create an new element of type div and then add it to the container.
-</p>
-<div class="buttons-container">
-    <button onclick="addFront()"><em> Add Front </em></button>
-    <button onclick="remove()"><em> Remove </em></button>
-    <button onclick="addEnd()"><em> Add End </em></button>
-</div>
-<script>
-    function addEnd() {
-        let e = document.createElement("div");
-        let inputValue = document.getElementById('inputText').value;
-        e.innerHTML = inputValue;
-        e.className = "merger";
-        let container = document.getElementById('target');
-        container.appendChild(e);
-    };
-    function addFront() {
-        let e = document.createElement("div");
-        let inputValue = document.getElementById('inputText').value;
-        e.innerHTML = inputValue;
-        e.className = "merger";
-        let container = document.getElementById("target");
-        container.insertBefore(e, container.firstChild);
-    };
-    function remove() {
-        let mergerItems = document.getElementsByClassName("merger");
-        let itemsLength = mergerItems.length;
-        if (itemsLength > 0) {
-            let mid = Math.floor(itemsLength / 2);
-            mergerItems[mid].remove();
-        }
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Susheel Pendyala Builds a Merger</title>
+
+  <style>
+
+   body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 50vh;
+
+    margin: 0;
+
+   }
+
+   #inputText {
+
+    padding: 10px;
+
+    font-size: 18px;
+
+    border: 2px solid #ccc;
+
+    border-radius: 5px;
+
+    width: 100%;
+
+    max-width: 300px;
+
+   }
+
+   .buttons-container {
+
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 10px;
+
+   }
+
+   button {
+
+    padding: 10px 20px;
+
+    font-size: 18px;
+
+    background-color: brown;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+   }
+
+   button {
+
+    margin-top: 10px;
+
+   }
+
+   .flex-container {
+
+    display: flex;
+
+    flex-direction: row;
+
+    background-color:chartreuse;
+
+   }
+
+   .flex-container > div {
+
+    background-color: #f1f1f1;
+
+    margin: 10px;
+
+    padding: 20px;
+
+    font-size: 30px;
+
+   }
+
+   @media (max-width: 600px) {
+
+    .flex-container {
+
+     flex-direction: column;
+
+     background-color: green;
+
     }
-</script>
-</body>
+
+   }
+
+  </style>
+
+ </head>
+
+ <body>
+
+  <!-- 7.2 -->
+
+  <header>
+
+   <h1>Susheel Pendyala Builds a Merger</h1>
+
+  </header>
+
+  <!-- 7.5 -->
+
+  <div class="flex-container" id="target">
+
+   <!-- 7.6.a -->
+
+   <div class="merger">row item 1</div>
+
+   <div class="merger">row item 2</div>
+
+   <div class="merger">row item 3</div>
+
+  </div>
+
+  <br />
+
+  <div>
+
+   <input type="text" id="inputText" placeholder="Enter Text" />
+
+  </div>
+
+  <p>
+
+   Press the button to create a new element of type div and then add it to
+
+   the container.
+
+  </p>
+
+  <div class="buttons-container">
+
+   <!-- 8.1 -->
+
+   <button onclick="addFront()">Add front</button>
+
+   <!-- 8.1 -->
+
+   <button onclick="remove()">Remove</button>
+
+   <!-- 7.3 -->
+
+   <!-- 7.4 -->
+
+   <button onclick="addEnd()">Add end</button>
+
+   <!-- BONUS -->
+
+   <button onclick="swap()">Swap</button>
+
+  </div>
+
+  <script>
+
+   // 7.6
+
+   function addEnd() {
+
+    // 7.6.b
+
+    let element = document.createElement("div");
+
+    let inputValue = document.getElementById("inputText").value;
+
+    // 7.6.c
+
+    element.innerHTML = inputValue;
+
+    // 7.6.d
+
+    element.className = "merger";
+
+    // 7.6.e
+
+    let container = document.getElementById("target");
+
+    container.appendChild(element);
+
+   }
+
+   // 8.5
+
+   function addFront() {
+
+    // 8.7
+
+    let element = document.createElement("div");
+
+    let inputValue = document.getElementById("inputText").value;
+
+    element.innerHTML = inputValue;
+
+    element.className = "merger";
+
+    // 8.8
+
+    let container = document.getElementById("target");
+
+    // 8.8.a, 8.8.b, 8.8.c
+
+    container.insertBefore(element, container.firstChild);
+
+   }
+
+   // 8.2
+
+   function remove() {
+
+    // 8.3
+
+    let mergerItems = document.getElementsByClassName("merger");
+
+    // 8.4
+
+    let itemsLength = mergerItems.length;
+
+    if (itemsLength > 0) {
+
+     let midIndex = Math.floor(itemsLength / 2);
+
+     mergerItems[midIndex].remove();
+
+    }
+
+   }
+
+  // BONUS
+
+   function swap() {
+
+    let mergerItems = document.getElementsByClassName("merger");
+
+    let itemsLength = mergerItems.length;
+
+    if (itemsLength < 2) {
+
+     alert("There are not enough elements to swap.");
+
+     return;
+
+    }
+
+    let randomIndex1 = getRandomIndex(itemsLength);
+
+    let randomIndex2 = getRandomIndex(itemsLength, randomIndex1);
+
+    if (randomIndex1 === randomIndex2) {
+
+     alert("Selected the same element. Nothing to swap.");
+
+     return;
+
+    }
+
+    let container = document.getElementById("target");
+
+    let item1 = mergerItems[randomIndex1];
+
+    let item2 = mergerItems[randomIndex2];
+
+    let nextItem1 = item1.nextElementSibling;
+
+    let nextItem2 = item2.nextElementSibling;
+
+    if (nextItem1 === item2) {
+
+     container.insertBefore(item2, item1);
+
+     container.insertBefore(item1, nextItem2);
+
+    }
+
+    else if (nextItem2 === item1) {
+
+     container.insertBefore(item1, item2);
+
+     container.insertBefore(item2, nextItem1);
+
+    }
+
+    else {
+
+     // Non-adjacent elements
+
+     container.insertBefore(item2, nextItem1);
+
+     container.insertBefore(item1, nextItem2);
+
+    }
+
+   }
+
+   function getRandomIndex(max, excludeIndex) {
+
+    let randomIndex;
+
+    do {
+
+     randomIndex = Math.floor(Math.random() * max);
+
+    } while (randomIndex === excludeIndex);
+
+    return randomIndex;
+
+   }
+
+  </script>
+
+ </body>
+
 </html>
